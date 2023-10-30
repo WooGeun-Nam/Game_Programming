@@ -1,4 +1,6 @@
-#GameCoding : Windows API GameClient
+# GameCoding : Windows API GameClient
+
+---
 
 속성 -> c/c++ -> 미리 컴파일된 헤더
 pch.h (pre compile header)
