@@ -62,3 +62,12 @@ new 하고 delete 안하면 메모리릭(Leak)이 발생
 	::BitBlt(_hdc, 0, 0, _rect.right, _rect.bottom, _hdcBack, 0, 0, SRCCOPY); // 비트 블릿 : 고속 복사
 	::PatBlt(_hdcBack, 0, 0, _rect.right, _rect.bottom, WHITENESS); // 그릴화면 배경 흰색으로
 ```
+
+데이터시트(고정값) : Excel, Json
+데이터베이스 : Oracle, MSSQL
+데이터시트 != 데이터베이스
+
+오브젝트의 생성과 소멸 (생명주기)
+
+vector, list 등의 컨테이너 for loop를 돌때 중간에 사라지거나 삽입할 떄 위험
+생성 예약

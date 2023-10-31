@@ -13,6 +13,8 @@ public:
 	void Remove(Object* object);
 	void Clear();
 	
+	// 참조 : 복사비용 절감
+	// 충돌의 경우 다른 존재의 위치를 알아야 한다
 	const vector<Object*>& GetObjects() { return _objects; }
 
 	// C++ 에서 Template는 자동 추론
