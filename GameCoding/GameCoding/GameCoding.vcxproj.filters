@@ -33,6 +33,12 @@
     <Filter Include="소스 파일\03. Object\Game">
       <UniqueIdentifier>{f913f909-f311-4bd4-bd5b-cc1d3d784e22}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\04. Resources">
+      <UniqueIdentifier>{e4ff3488-5d11-4f81-b5d3-e36f991e93c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04. Resources\Game">
+      <UniqueIdentifier>{c06330e7-4b72-4899-985d-804752943058}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameCoding.h">
@@ -68,9 +74,6 @@
     <ClInclude Include="Utils.h">
       <Filter>소스 파일\99. Headers</Filter>
     </ClInclude>
-    <ClInclude Include="TimeManager.h">
-      <Filter>소스 파일\99. Headers</Filter>
-    </ClInclude>
     <ClInclude Include="Scene.h">
       <Filter>소스 파일\02. Scene</Filter>
     </ClInclude>
@@ -98,6 +101,21 @@
     <ClInclude Include="ObjectManager.h">
       <Filter>소스 파일\01. Manager</Filter>
     </ClInclude>
+    <ClInclude Include="EditScene.h">
+      <Filter>소스 파일\02. Scene\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeManager.h">
+      <Filter>소스 파일\01. Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceBase.h">
+      <Filter>소스 파일\04. Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>소스 파일\01. Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="LineMesh.h">
+      <Filter>소스 파일\04. Resources\Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="GameCoding.rc">
@@ -116,17 +134,11 @@
     <ClCompile Include="GameCoding.cpp">
       <Filter>소스 파일\00. MainGame</Filter>
     </ClCompile>
-    <ClCompile Include="pch.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="InputManager.cpp">
       <Filter>소스 파일\01. Manager</Filter>
     </ClCompile>
     <ClCompile Include="TimeManager.cpp">
       <Filter>소스 파일\01. Manager</Filter>
-    </ClCompile>
-    <ClCompile Include="Utils.cpp">
-      <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Scene.cpp">
       <Filter>소스 파일\02. Scene</Filter>
@@ -143,9 +155,6 @@
     <ClCompile Include="Object.cpp">
       <Filter>소스 파일\03. Object</Filter>
     </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Missile.cpp">
       <Filter>소스 파일\03. Object\Game</Filter>
     </ClCompile>
@@ -157,6 +166,27 @@
     </ClCompile>
     <ClCompile Include="ObjectManager.cpp">
       <Filter>소스 파일\01. Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="EditScene.cpp">
+      <Filter>소스 파일\02. Scene\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>소스 파일\00. MainGame</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceBase.cpp">
+      <Filter>소스 파일\04. Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>소스 파일\01. Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="LineMesh.cpp">
+      <Filter>소스 파일\04. Resources\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>소스 파일\99. Headers</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>소스 파일\99. Headers</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
