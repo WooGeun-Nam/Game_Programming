@@ -19,4 +19,3 @@ private:
 	HDC _hdcBack = {};
 	HBITMAP _bmpBack = {};
 };
-

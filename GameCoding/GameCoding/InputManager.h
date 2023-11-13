@@ -14,7 +14,8 @@ enum class KeyType // 한번 더 매핑해서 찾기 편하게
 	W = 'W',
 	A = 'A',
 	S = 'S',
-	D = 'D'
+	D = 'D',
+	E = 'E'
 };
 
 enum class KeyState

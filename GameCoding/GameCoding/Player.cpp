@@ -2,7 +2,6 @@
 #include "Player.h"
 #include "InputManager.h"
 #include "TimeManager.h"
-#include "Missile.h"
 #include "ObjectManager.h"
 #include "ResourceManager.h"
 #include "LineMesh.h"
@@ -47,27 +46,39 @@ void Player::Update()
 	// 대각선으로 움직이면 빨라진다
 	if (GET_SINGLE(InputManager)->GetButton(KeyType::W))
 	{
-		_pos.y -= _stat.speed * deltaTime;
+		//_pos.y -= _stat.speed * deltaTime;
 	}
 
 	if (GET_SINGLE(InputManager)->GetButton(KeyType::S))
 	{
-		_pos.y += _stat.speed * deltaTime;
+		//_pos.y += _stat.speed * deltaTime;
 	}
 
 	if (GET_SINGLE(InputManager)->GetButtonDown(KeyType::SpaceBar))
 	{
 		// TODO : 미사일 발사
-		Missile* missile = GET_SINGLE(ObjectManager)->CreateObject<Missile>();
-		missile->SetPos(_pos);
-		GET_SINGLE(ObjectManager)->Add(missile);
 	}
 }
 
 void Player::Render(HDC hdc)
 {
 	// Utils::DrawCircle(hdc, _pos, 50);
-	const LineMesh* mesh = GET_SINGLE(ResourceManager)->GetLineMesh(L"Player");
+	const LineMesh* mesh = GET_SINGLE(ResourceManager)->GetLineMesh(GetMeshKey());
 	if (mesh)
-		mesh->Render(hdc, _pos);
+		mesh->Render(hdc, _pos, 0.5f, 0.5f);
+	// 음수의 경우 반전 mesh->Render(hdc, _pos, -0.5f, 0.5f);
+
+	HPEN pen = ::CreatePen(PS_SOLID, 1, RGB(255, 0, 0));
+	HPEN oldPen = (HPEN)::SelectObject(hdc, pen);
+
+	::SelectObject(hdc, oldPen);
+	::DeleteObject(pen);
+}
+
+wstring Player::GetMeshKey()
+{
+	if (_playerType == PlayerType::MissileTank)
+		return L"MissileTank";
+
+	return L"CanonTank";
 }

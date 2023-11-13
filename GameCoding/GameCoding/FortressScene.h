@@ -1,10 +1,10 @@
 #pragma once
-#include "Object.h"
-class Monster : public Object
+#include "Scene.h"
+class FortressScene : public Scene
 {
 public:
-	Monster();
-	virtual ~Monster() override;
+	FortressScene();
+	virtual ~FortressScene() override;
 
 	virtual void Init() override;
 	virtual void Update() override;

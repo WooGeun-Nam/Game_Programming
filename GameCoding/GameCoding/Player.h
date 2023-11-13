@@ -1,5 +1,12 @@
 #pragma once
 #include "Object.h"
+
+enum class PlayerType
+{
+	CanonTank,
+	MissileTank
+};
+
 class Player : public Object
 {
 public:
@@ -10,7 +17,11 @@ public:
 	virtual void Update() override;
 	virtual void Render(HDC hdc) override;
 
-public:
+	wstring GetMeshKey();
 
+	void SetPlayerType(PlayerType playerType) { _playerType = playerType; }
+
+public:
+	PlayerType _playerType = PlayerType::CanonTank;
 };
 

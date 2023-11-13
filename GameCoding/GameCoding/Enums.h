@@ -6,4 +6,6 @@ enum class SceneType
 	DevScene,
 	GameScene,
 	EditScene,
+	MenuScene,
+	FortressScene
 };
