@@ -23,6 +23,8 @@ void FortressScene::Init()
 	{
 		Player* player = GET_SINGLE(ObjectManager)->CreateObject<Player>();
 		player->SetPlayerType(PlayerType::MissileTank);
+		player->SetPlayerId(0);
+		player->SetPlayerTurn(true);
 
 		GET_SINGLE(ObjectManager)->Add(player);
 
@@ -32,6 +34,8 @@ void FortressScene::Init()
 	{
 		Player* player = GET_SINGLE(ObjectManager)->CreateObject<Player>();
 		player->SetPlayerType(PlayerType::CanonTank);
+		player->SetPlayerId(1);
+		player->SetPlayerTurn(false);
 
 		GET_SINGLE(ObjectManager)->Add(player);
 

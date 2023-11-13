@@ -9,3 +9,15 @@ enum class SceneType
 	MenuScene,
 	FortressScene
 };
+
+enum class PlayerType
+{
+	CanonTank,
+	MissileTank
+};
+
+enum class Dir
+{
+	Left,
+	Right
+};
