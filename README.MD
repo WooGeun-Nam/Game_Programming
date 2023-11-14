@@ -71,3 +71,5 @@ new 하고 delete 안하면 메모리릭(Leak)이 발생
 
 vector, list 등의 컨테이너 for loop를 돌때 중간에 사라지거나 삽입할 떄 위험
 생성 예약
+
+dynamic_cast : 타입체크
